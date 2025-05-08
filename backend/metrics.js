@@ -13,6 +13,17 @@ client.collectDefaultMetrics({ register });
 // Admin Metrics
 // ==============================
 
+// admin 
+const adminLoginCounter = new client.Counter({
+  name: 'admin_logins_total',
+  help: 'Total number of admin logins',
+});
+
+const adminRegisterCounter = new client.Counter({
+  name: 'admin_registrations_total',
+  help: 'Total number of admin registrations',
+});
+
 const adminRegistrationSuccess = new client.Counter({
   name: 'admin_registration_success_total',
   help: 'Total number of successful admin registrations',
@@ -27,6 +38,7 @@ const adminDetailRequests = new client.Counter({
   name: 'admin_detail_requests_total',
   help: 'Total number of admin detail fetch requests',
 });
+
 
 // student
 const studentRegisterRequests = new client.Counter({
