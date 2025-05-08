@@ -13,38 +13,6 @@ client.collectDefaultMetrics({ register });
 // Admin Metrics
 // ==============================
 
-const adminLoginCounter = new client.Counter({
-  name: 'admin_logins_total',
-  help: 'Total number of admin logins',
-});
-
-const adminRegisterCounter = new client.Counter({
-  name: 'admin_registrations_total',
-  help: 'Total number of admin registrations',
-});
-
-// Student
-const studentRegisterRequests = new client.Counter({
-  name: 'student_register_requests_total',
-  help: 'Total number of student registration attempts'
-});
-
-const studentRegisterSuccess = new client.Counter({
-  name: 'student_register_success_total',
-  help: 'Total number of successful student registrations'
-});
-
-const studentLoginRequests = new client.Counter({
-  name: 'student_login_requests_total',
-  help: 'Total number of student login attempts'
-});
-
-const studentLoginSuccess = new client.Counter({
-  name: 'student_login_success_total',
-  help: 'Total number of successful student logins'
-});
-
-
 const adminRegistrationSuccess = new client.Counter({
   name: 'admin_registration_success_total',
   help: 'Total number of successful admin registrations',
@@ -110,32 +78,6 @@ const studentRegisterRequests = new client.Counter({
     name: 'update_student_success_total',
     help: 'Total number of successful student updates',
   });
-
-
-const getStudentsRequests = new client.Counter({
-  name: 'get_students_requests_total',
-  help: 'Total number of requests to fetch students list'
-});
-
-const deleteStudentRequests = new client.Counter({
-  name: 'delete_student_requests_total',
-  help: 'Total number of delete student requests'
-});
-
-const studentAttendanceRequests = new client.Counter({
-  name: 'student_attendance_requests_total',
-  help: 'Total number of requests for student attendance'
-});
-
-const updateStudentRequests = new client.Counter({
-  name: 'update_student_requests_total',
-  help: 'Total number of update student requests',
-});
-
-const updateStudentSuccess = new client.Counter({
-  name: 'update_student_success_total',
-  help: 'Total number of successful student updates',
-});
 
 
 // classes
@@ -253,50 +195,6 @@ const teacherAttendanceRequests = new client.Counter({
 // ==============================
 // Student Metrics
 // ==============================
-const studentRegisterRequests = new client.Counter({
-  name: 'student_register_requests_total',
-  help: 'Total number of student registration attempts'
-});
-
-const studentRegisterSuccess = new client.Counter({
-  name: 'student_register_success_total',
-  help: 'Total number of successful student registrations'
-});
-
-const studentLoginRequests = new client.Counter({
-  name: 'student_login_requests_total',
-  help: 'Total number of student login attempts'
-});
-
-const studentLoginSuccess = new client.Counter({
-  name: 'student_login_success_total',
-  help: 'Total number of successful student logins'
-});
-
-const getStudentsRequests = new client.Counter({
-  name: 'get_students_requests_total',
-  help: 'Total number of requests to fetch students list'
-});
-
-const deleteStudentRequests = new client.Counter({
-  name: 'delete_student_requests_total',
-  help: 'Total number of delete student requests'
-});
-
-const studentAttendanceRequests = new client.Counter({
-  name: 'student_attendance_requests_total',
-  help: 'Total number of requests for student attendance'
-});
-
-const updateStudentRequests = new client.Counter({
-  name: 'update_student_requests_total',
-  help: 'Total number of update student requests',
-});
-
-const updateStudentSuccess = new client.Counter({
-  name: 'update_student_success_total',
-  help: 'Total number of successful student updates',
-});
 
 // ==============================
 // Subject Metrics
@@ -478,7 +376,6 @@ module.exports = {
   // Admin
   adminLoginCounter,
   adminRegisterCounter,
-
   adminRegistrationSuccess,
   adminLoginSuccess,
   adminDetailRequests,
@@ -493,9 +390,9 @@ module.exports = {
   getStudentRequests,
   deleteStudentRequests,
   studentAttendanceRequests,
-
-  updateStudentRequests,
+  updateexamresultsRequests,
   updateStudentSuccess,
+  
   classCreateRequests,
   classCreateSuccess,
   classCreateFailures,
@@ -519,12 +416,6 @@ module.exports = {
   deleteTeacherRequests,
   teacherAttendanceRequests,
 
-
-  updateexamresultsRequests,
-  updateStudentSuccess,
-
-  updateStudentRequests,
-  updateStudentSuccess,
   // Subject
   subjectCreateRequests,
   subjectCreateSuccess,
